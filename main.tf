@@ -1,8 +1,13 @@
 terraform {
+    required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+    }
+  }
   cloud{
     organization = "tyreepearson"
     workspaces{
-        names="eks-getting-started"
+        name ="eks-getting-started"
     }
   }
 }
